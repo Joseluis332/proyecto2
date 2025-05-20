@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="/MiproyectoMASP/public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido, {{ nombre }} !</h1>
+        <p>Has iniciado sesión correctamente.</p>
+
+        <h2>¿Qué deseas hacer?</h2>
+        <div class="menu-acciones">
+            <ul>
+                <li><a href="/MiproyectoMASP/public/docentes/menu">Docentes</a></li>
+                <li><a href="/MiproyectoMASP/public/estudiantes/menu">Estudiante</a></li>
+                </ul>
+        </div>
+
+        <p><a href="/MiproyectoMASP/public/logout">Cerrar sesión</a></p>
+    </div>
+</body>
+</html>

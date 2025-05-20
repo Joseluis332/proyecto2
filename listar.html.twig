@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Docentes</title>
+    <link rel="stylesheet" href="/MiproyectoMASP/public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Docentes</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cédula</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Fecha de Registro</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for docente in docentes %}
+                    <tr>
+                        <td>{{ docente.id }}</td>
+                        <td>{{ docente.cedula }}</td>
+                        <td>{{ docente.nombre }}</td>
+                        <td>{{ docente.apellido }}</td>
+                        <td>{{ docente.email }}</td>
+                        <td>{{ docente.telefono }}</td>
+                        <td>{{ docente.fecha_registro }}</td>
+                        <td>
+                            <a href="#">Editar</a> |
+                            <a href="#">Eliminar</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr><td colspan="8">No hay docentes registrados.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <p><a href="/MiproyectoMASP/public/home">Volver al inicio</a></p>
+    </div>
+</body>
+</html>
